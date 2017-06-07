@@ -14,7 +14,8 @@ defmodule HammerTestbed.Web.PageController do
       {:ok, _count} ->
         Logger.log(:info, "Rate-Limit ok, generating timestamp")
         now = DateTime.utc_now()
-        conn |> json("{\"timestamp\": \"#{now}\"}")
+        conn
+        |> json(%{timestamp: "#{now}"})
       {:error, _} ->
         Logger.log(:info, "Rate-Limit exceeded, denying request")
         conn |> send_resp(429, "Too many requests")
