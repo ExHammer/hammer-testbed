@@ -12,6 +12,8 @@ defmodule HammerTestbed.Application do
       supervisor(HammerTestbed.Web.Endpoint, []),
       # Start your own worker by calling: HammerTestbed.Worker.start_link(arg1, arg2, arg3)
       # worker(HammerTestbed.Worker, [arg1, arg2, arg3]),
+      worker(Hammer.Backend.ETS, []),
+      worker(Hammer, [[backend: Hammer.Backend.ETS]])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

@@ -17,6 +17,7 @@ defmodule HammerTestbed.Web.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/timestamp", PageController, :get_timestamp
   end
 
   # Other scopes may use custom stacks.
