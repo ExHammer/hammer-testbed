@@ -1,5 +1,7 @@
 # HammerTestbed
 
+A demo app for the [Hammer](https://github.com/ExHammer/hammer) rate-limiter.
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
@@ -16,6 +18,9 @@ Start the server, then visit `/timestamp`, to get the current time. This request
 the rate-limit is exceeded (5 requests in 60 seconds).
 
 See `lib/hammer_testbed/application.ex` to see how Hammer and the ETS backend are started.
+
+See `lib/hammer_testbed/web/controllers/page_controller` for an example of how to use
+the Hammer rate-limiter.
 
 
 ## Learn more
