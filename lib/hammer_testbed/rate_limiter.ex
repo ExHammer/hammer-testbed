@@ -10,6 +10,6 @@ defmodule HammerTestbed.RateLimiter do
       worker(Hammer.Backend.ETS, []),
       worker(Hammer, [[backend: Hammer.Backend.ETS]])
     ]
-    supervise(children, strategy: :one_for_one)
+    supervise(children, strategy: :one_for_one, name: HammerTestbed.RateLimiter)
   end
 end
