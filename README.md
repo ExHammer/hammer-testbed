@@ -17,7 +17,7 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 Start the server, then visit `/timestamp`, to get the current time. This request will be denied if
 the rate-limit is exceeded (5 requests in 60 seconds).
 
-See `lib/hammer_testbed/application.ex` to see how Hammer and the ETS backend are started.
+See `lib/hammer_testbed/rate_limiter.ex` to see how Hammer and the ETS backend are started.
 
 See `lib/hammer_testbed/web/controllers/page_controller` for an example of how to use
 the Hammer rate-limiter.
