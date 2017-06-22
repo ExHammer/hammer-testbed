@@ -33,6 +33,7 @@ defmodule HammerTestbed.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:hammer, path: "../hammer"},
+     {:hammer_backend_redis, path: "../hammer_backend_redis"},
      {:cowboy, "~> 1.0"}]
   end
 end

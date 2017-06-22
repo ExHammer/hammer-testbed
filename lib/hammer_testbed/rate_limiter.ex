@@ -7,8 +7,11 @@ defmodule HammerTestbed.RateLimiter do
 
   def init(:ok) do
     children = [
-      worker(Hammer.Backend.ETS, []),
-      worker(Hammer, [[backend: Hammer.Backend.ETS]])
+      # worker(Hammer.Backend.ETS, []),
+      worker(Hammer.Backend.Redis, []),
+      worker(Hammer, [[backend: Hammer.Backend.Redis,
+                       expiry: 1000 * 60 * 5,
+                       cleanup_rate: 1000 * 60 * 12]])
     ]
     supervise(children, strategy: :one_for_one, name: HammerTestbed.RateLimiter)
   end

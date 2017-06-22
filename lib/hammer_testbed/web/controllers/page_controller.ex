@@ -11,12 +11,12 @@ defmodule HammerTestbed.Web.PageController do
     |> Tuple.to_list
     |> Enum.join(".")
     case Hammer.check_rate("get_timestamp:#{ip}", 60_000, 5) do
-      {:ok, _count} ->
+      {:allow, _count} ->
         Logger.log(:info, "Rate-Limit ok, generating timestamp")
         now = DateTime.utc_now()
         conn
         |> json(%{timestamp: "#{now}"})
-      {:error, _} ->
+      {:deny, _} ->
         Logger.log(:info, "Rate-Limit exceeded, denying request")
         conn |> send_resp(429, "Too many requests")
     end
