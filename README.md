@@ -23,6 +23,9 @@ See `lib/hammer_testbed/web/controllers/page_controller` for an example of how t
 the Hammer rate-limiter.
 
 
+![Rate Limiter Demo](rate-limit-demo.gif)
+
+
 ## Learn more
 
   * Official website: http://www.phoenixframework.org/
