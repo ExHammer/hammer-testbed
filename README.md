@@ -17,6 +17,16 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 Start the server, then visit `/timestamp`, to get the current time. This request will be denied if
 the rate-limit is exceeded (5 requests in 60 seconds).
 
+Hit `/timestamp/rl` to inspect the rate-limiter status.
+
+Example:
+
+```bash
+curl http://localhost:4000/timestamp
+# => {"timestamp":"2017-07-30 11:56:21.502347Z"}
+```
+
+
 See `lib/hammer_testbed/rate_limiter.ex` to see how Hammer and the ETS backend are started.
 
 See `lib/hammer_testbed/web/controllers/page_controller` for an example of how to use
@@ -24,6 +34,11 @@ the Hammer rate-limiter.
 
 
 ![Rate Limiter Demo](rate-limit-demo.gif)
+
+
+## Testing
+
+Run `./bin/test.sh`
 
 
 ## Learn more
