@@ -26,4 +26,13 @@ defmodule HammerTestbed.Web.PageController do
         conn |> send_resp(429, "Too many requests")
     end
   end
+
+  def inspect_rate_limit(conn, _params) do
+    # Get a (semi) unique identifier for this user
+    ip = conn.remote_ip
+    |> Tuple.to_list
+    |> Enum.join(".")
+    {:ok, bucket} = RateLimiter.inspect_bucket("get_timestamp:#{ip}", 60_000, 5)
+    conn |> json(%{bucket: Tuple.to_list(bucket)})
+  end
 end
