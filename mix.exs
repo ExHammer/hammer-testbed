@@ -32,10 +32,13 @@ defmodule HammerTestbed.Mixfile do
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
-     {:hammer, "~> 1.0.0"},
+     # {:hammer, "~> 1.0.0"},
+     {:hammer, [git: "https://github.com/ExHammer/hammer.git", branch: "issue-12-new-api"]},
      # {:hammer, path: "../hammer"},
-     {:hammer_backend_redis, "~> 0.1.0"},
+     # {:hammer_backend_redis, "~> 0.1.0"},
      # {:hammer_backend_redis, path: "../hammer_backend_redis"},
+     {:hammer_backend_redis, [git: "https://github.com/ExHammer/hammer-backend-redis.git",
+                branch: "issue-8-update-to-new-api"]},
      {:cowboy, "~> 1.0"}]
   end
 end

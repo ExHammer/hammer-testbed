@@ -13,6 +13,13 @@ config :hammer_testbed, HammerTestbed.Web.Endpoint,
   pubsub: [name: HammerTestbed.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
+config :hammer_backend_redis,
+  expiry_ms: 60_000 * 5,
+  redix_config: []
+
+config :hammer,
+  backend: Hammer.Backend.Redis
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",

@@ -1,7 +1,6 @@
 defmodule HammerTestbed.Web.PageController do
   use HammerTestbed.Web, :controller
   import Logger
-  alias HammerTestbed.RateLimiter
 
   def index(conn, _params) do
     render conn, "index.html"
@@ -13,7 +12,7 @@ defmodule HammerTestbed.Web.PageController do
     |> Tuple.to_list
     |> Enum.join(".")
     # Do the rate-limit check, permit five hits per minute
-    case RateLimiter.check_rate("get_timestamp:#{ip}", 60_000, 5) do
+    case Hammer.check_rate("get_timestamp:#{ip}", 60_000, 5) do
       # Action is allowed
       {:allow, _count} ->
         Logger.log(:info, "Rate-Limit ok, generating timestamp")
@@ -32,7 +31,7 @@ defmodule HammerTestbed.Web.PageController do
     ip = conn.remote_ip
     |> Tuple.to_list
     |> Enum.join(".")
-    {:ok, bucket} = RateLimiter.inspect_bucket("get_timestamp:#{ip}", 60_000, 5)
+    {:ok, bucket} = Hammer.inspect_bucket("get_timestamp:#{ip}", 60_000, 5)
     conn |> json(%{bucket: Tuple.to_list(bucket)})
   end
 end
