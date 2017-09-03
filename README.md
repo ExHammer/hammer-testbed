@@ -26,8 +26,7 @@ curl http://localhost:4000/timestamp
 # => {"timestamp":"2017-07-30 11:56:21.502347Z"}
 ```
 
-
-See `lib/hammer_testbed/rate_limiter.ex` to see how Hammer and the ETS backend are started.
+See `config/config.exs` to see how Hammer and the backend are configured.
 
 See `lib/hammer_testbed/web/controllers/page_controller` for an example of how to use
 the Hammer rate-limiter.
@@ -38,7 +37,7 @@ the Hammer rate-limiter.
 
 ## Testing
 
-Run `./bin/test.sh`
+Run `./bin/test.sh`, observe the output.
 
 
 ## Learn more
