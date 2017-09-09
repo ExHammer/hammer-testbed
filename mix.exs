@@ -4,7 +4,7 @@ defmodule HammerTestbed.Mixfile do
   def project do
     [app: :hammer_testbed,
      version: "0.0.1",
-     elixir: "~> 1.4",
+     elixir: "~> 1.5",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix, :gettext] ++ Mix.compilers,
      start_permanent: Mix.env == :prod,
@@ -33,12 +33,12 @@ defmodule HammerTestbed.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      # {:hammer, "~> 1.0.0"},
-     {:hammer, [git: "https://github.com/ExHammer/hammer.git", branch: "issue-12-new-api"]},
-     # {:hammer, path: "../hammer"},
+     # {:hammer, [git: "https://github.com/ExHammer/hammer.git", branch: "issue-12-new-api"]},
+     {:hammer, path: "../hammer"},
      # {:hammer_backend_redis, "~> 0.1.0"},
-     # {:hammer_backend_redis, path: "../hammer_backend_redis"},
-     {:hammer_backend_redis, [git: "https://github.com/ExHammer/hammer-backend-redis.git",
-                branch: "issue-8-update-to-new-api"]},
+     {:hammer_backend_redis, path: "../hammer_backend_redis"},
+     # {:hammer_backend_redis, [git: "https://github.com/ExHammer/hammer-backend-redis.git",
+     #            branch: "issue-8-update-to-new-api"]},
      {:cowboy, "~> 1.0"}]
   end
 end

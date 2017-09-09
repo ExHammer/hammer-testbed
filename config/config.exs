@@ -13,12 +13,16 @@ config :hammer_testbed, HammerTestbed.Web.Endpoint,
   pubsub: [name: HammerTestbed.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
-config :hammer_backend_redis,
-  expiry_ms: 60_000 * 5,
-  redix_config: []
+## Hammer with ETS backend
 
 config :hammer,
-  backend: Hammer.Backend.Redis
+  backend: {Hammer.Backend.ETS, []}
+
+## Hammer with Redis backend
+
+# config :hammer,
+#   backend: {Hammer.Backend.Redis, [expiry_ms: 60_000 * 2,
+#                                    redix_config: []]}
 
 # Configures Elixir's Logger
 config :logger, :console,
