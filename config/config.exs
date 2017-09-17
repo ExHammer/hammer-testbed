@@ -15,8 +15,8 @@ config :hammer_testbed, HammerTestbed.Web.Endpoint,
 
 ## Hammer with ETS backend
 
-config :hammer,
-  backend: {Hammer.Backend.ETS, []}
+# config :hammer,
+#   backend: {Hammer.Backend.ETS, []}
 
 ## Hammer with Redis backend
 
