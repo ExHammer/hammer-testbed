@@ -9,7 +9,7 @@ defmodule HammerTestbed.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the endpoint when the application starts
-      supervisor(HammerTestbed.Web.Endpoint, []),
+      supervisor(HammerTestbed.Web.Endpoint, [])
       # Start your own worker by calling: HammerTestbed.Worker.start_link(arg1, arg2, arg3)
       # worker(HammerTestbed.Worker, [arg1, arg2, arg3]),
     ]
