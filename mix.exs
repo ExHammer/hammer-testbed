@@ -35,7 +35,7 @@ defmodule HammerTestbed.Mixfile do
      {:hammer, "~> 2.0.0-rc1"},
      # {:hammer, [git: "https://github.com/ExHammer/hammer.git", branch: "issue-12-new-api"]},
      # {:hammer, path: "../hammer"},
-     {:hammer_backend_redis, "~> 2.0.0-rc1"},
+     {:hammer_backend_redis, "~> 2.0.0-rc2"},
      # {:hammer_backend_redis, path: "../hammer_backend_redis"},
      # {:hammer_backend_redis, [git: "https://github.com/ExHammer/hammer-backend-redis.git",
      #                          branch: "issue-8-update-to-new-api"]},
