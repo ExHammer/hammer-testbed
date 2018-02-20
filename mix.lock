@@ -1,10 +1,11 @@
-%{"connection": {:hex, :connection, "1.0.4", "a1cae72211f0eef17705aaededacac3eb30e6625b04a6117c1b2db6ace7d5976", [:mix], [], "hexpm"},
+%{
+  "connection": {:hex, :connection, "1.0.4", "a1cae72211f0eef17705aaededacac3eb30e6625b04a6117c1b2db6ace7d5976", [:mix], [], "hexpm"},
   "cowboy": {:hex, :cowboy, "1.1.2", "61ac29ea970389a88eca5a65601460162d370a70018afe6f949a29dca91f3bb0", [:rebar3], [{:cowlib, "~> 1.0.2", [hex: :cowlib, repo: "hexpm", optional: false]}, {:ranch, "~> 1.3.2", [hex: :ranch, repo: "hexpm", optional: false]}], "hexpm"},
   "cowlib": {:hex, :cowlib, "1.0.2", "9d769a1d062c9c3ac753096f868ca121e2730b9a377de23dec0f7e08b1df84ee", [:make], [], "hexpm"},
   "fs": {:hex, :fs, "0.9.2", "ed17036c26c3f70ac49781ed9220a50c36775c6ca2cf8182d123b6566e49ec59", [:rebar], [], "hexpm"},
   "gettext": {:hex, :gettext, "0.13.1", "5e0daf4e7636d771c4c71ad5f3f53ba09a9ae5c250e1ab9c42ba9edccc476263", [:mix], [], "hexpm"},
-  "hammer": {:hex, :hammer, "2.0.0", "027b0bf00d1c6af6ff1721c91da53670aa176ea310e8bdd6a0ef874ea98b6f43", [:mix], [], "hexpm"},
-  "hammer_backend_redis": {:hex, :hammer_backend_redis, "2.0.0", "7a950550d42df174aa8905d6c7f99de367c560c3bca5a6bceacb8079ab535e19", [:mix], [{:hammer, "2.0.0", [hex: :hammer, repo: "hexpm", optional: false]}, {:redix, "~> 0.6", [hex: :redix, repo: "hexpm", optional: false]}], "hexpm"},
+  "hammer": {:hex, :hammer, "3.0.0", "c2bd92ccbbd0370d091a8337737aedd25e6715a7de759ba1ae6d1bad9fd76ca8", [:mix], [], "hexpm"},
+  "hammer_backend_redis": {:hex, :hammer_backend_redis, "3.0.0", "d838a1546fccbe3b04430503d7d9f6a88b06b78dbfa85cac7697af36d2427618", [:mix], [{:hammer, "~> 3.0", [hex: :hammer, repo: "hexpm", optional: false]}, {:redix, "~> 0.7", [hex: :redix, repo: "hexpm", optional: false]}], "hexpm"},
   "mime": {:hex, :mime, "1.1.0", "01c1d6f4083d8aa5c7b8c246ade95139620ef8effb009edde934e0ec3b28090a", [:mix], [], "hexpm"},
   "phoenix": {:hex, :phoenix, "1.3.0-rc.2", "53104ada25ba85fe160268c0dc826fe038bc074293730b4522fb9aca28d8aa13", [:mix], [{:cowboy, "~> 1.0", [hex: :cowboy, repo: "hexpm", optional: true]}, {:phoenix_pubsub, "~> 1.0", [hex: :phoenix_pubsub, repo: "hexpm", optional: false]}, {:plug, "~> 1.3.2 or ~> 1.4", [hex: :plug, repo: "hexpm", optional: false]}, {:poison, "~> 2.2 or ~> 3.0", [hex: :poison, repo: "hexpm", optional: false]}], "hexpm"},
   "phoenix_html": {:hex, :phoenix_html, "2.9.3", "1b5a2122cbf743aa242f54dced8a4f1cc778b8bd304f4b4c0043a6250c58e258", [:mix], [{:plug, "~> 1.0", [hex: :plug, repo: "hexpm", optional: false]}], "hexpm"},
@@ -13,4 +14,5 @@
   "plug": {:hex, :plug, "1.3.5", "7503bfcd7091df2a9761ef8cecea666d1f2cc454cbbaf0afa0b6e259203b7031", [:mix], [{:cowboy, "~> 1.0.1 or ~> 1.1", [hex: :cowboy, repo: "hexpm", optional: true]}, {:mime, "~> 1.0", [hex: :mime, repo: "hexpm", optional: false]}], "hexpm"},
   "poison": {:hex, :poison, "3.1.0", "d9eb636610e096f86f25d9a46f35a9facac35609a7591b3be3326e99a0484665", [:mix], [], "hexpm"},
   "ranch": {:hex, :ranch, "1.3.2", "e4965a144dc9fbe70e5c077c65e73c57165416a901bd02ea899cfd95aa890986", [:rebar3], [], "hexpm"},
-  "redix": {:hex, :redix, "0.6.1", "20986b0e02f02b13e6f53c79a1ae70aa83147488c408f40275ec261f5bb0a6d0", [:mix], [{:connection, "~> 1.0", [hex: :connection, repo: "hexpm", optional: false]}], "hexpm"}}
+  "redix": {:hex, :redix, "0.7.0", "14a22cba1137600ccf8d64baf1b291689add779488f9a193d7d83dcc3e03a7a4", [:mix], [{:connection, "~> 1.0", [hex: :connection, repo: "hexpm", optional: false]}], "hexpm"},
+}

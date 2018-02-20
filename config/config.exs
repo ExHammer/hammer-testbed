@@ -24,6 +24,12 @@ config :hammer,
 #   backend: {Hammer.Backend.Redis, [expiry_ms: 60_000 * 2,
 #                                    redix_config: []]}
 
+# config :hammer,
+#   backend: [
+#     ets: {Hammer.Backend.ETS, []},
+#     redis: {Hammer.Backend.Redis, []}
+#   ]
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",

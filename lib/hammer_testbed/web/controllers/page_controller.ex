@@ -31,6 +31,7 @@ defmodule HammerTestbed.Web.PageController do
     ip = conn.remote_ip
     |> Tuple.to_list
     |> Enum.join(".")
+    # Get info on the current bucket
     {:ok, bucket} = Hammer.inspect_bucket("get_timestamp:#{ip}", 60_000, 5)
     conn |> json(%{bucket: Tuple.to_list(bucket)})
   end
