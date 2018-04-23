@@ -18,6 +18,7 @@ defmodule HammerTestbed.Web.Router do
 
     get "/", PageController, :index
     get "/timestamp", PageController, :get_timestamp
+    get "/timestamp-no-limit", PageController, :get_timestamp_no_limit
     get "/timestamp/rl", PageController, :inspect_rate_limit
   end
 

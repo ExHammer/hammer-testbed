@@ -26,6 +26,11 @@ defmodule HammerTestbed.Web.PageController do
     end
   end
 
+  def get_timestamp_no_limit(conn, _params) do
+    now = DateTime.utc_now()
+    conn |> json(%{timestamp: "#{now}"})
+  end
+
   def inspect_rate_limit(conn, _params) do
     # Get a (semi) unique identifier for this user
     ip = conn.remote_ip

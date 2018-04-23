@@ -16,18 +16,35 @@ config :hammer_testbed, HammerTestbed.Web.Endpoint,
 ## Hammer with ETS backend
 
 config :hammer,
-  backend: {Hammer.Backend.ETS, []}
+  backend: {Hammer.Backend.ETS, [pool_size: 2]}
+
 
 ## Hammer with Redis backend
 
 # config :hammer,
 #   backend: {Hammer.Backend.Redis, [expiry_ms: 60_000 * 2,
-#                                    redix_config: []]}
+#                                    redix_config: [],
+#                                    pool_size: 6]}
+
+
+## Hammer with multiple backends
 
 # config :hammer,
 #   backend: [
 #     ets: {Hammer.Backend.ETS, []},
 #     redis: {Hammer.Backend.Redis, []}
+#   ]
+
+
+## Hammer with multiple backends, and with multiple redis's
+
+# config :hammer,
+#   backend: [
+#     ets: {Hammer.Backend.ETS, []},
+#     redis_one: {Hammer.Backend.Redis, []},
+#     redis_two: {Hammer.Backend.Redis, [expiry_ms: 60_000 * 1,
+#                                        redix_config: [port: 7777],
+#                                        pool_size: 6]}
 #   ]
 
 # Configures Elixir's Logger
